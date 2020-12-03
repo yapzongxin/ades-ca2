@@ -1,0 +1,8 @@
+@host = localhost:3000
+@path = /customer/queue
+
+GET http://{{host}}{{path}}?queue_id=QUEUE12345 HTTP/1.1
+
+### 1234567890
+
+GET http://{{host}}{{path}}?queue_id=QUEUE12342&customer_id=1234567890 HTTP/1.1

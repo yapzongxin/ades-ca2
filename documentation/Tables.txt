@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS queues CASCADE;
+DROP TABLE IF EXISTS customers CASCADE;
+
+CREATE TABLE queues (
+ 	id SERIAL PRIMARY KEY,
+    queue_id VARCHAR(10) UNIQUE NOT NULL,
+    status VARCHAR DEFAULT 'INACTIVE' NOT NULL,
+    company_id BIGINT CONSTRAINT TenDigits CHECK (company_id BETWEEN 1000000000 and 9999999999) 
+);
+
+CREATE TABLE customers (
+   id SERIAL PRIMARY KEY,
+    customer_id BIGINT NOT NULL,
+   queue_id VARCHAR(10) NOT NULL,
+      FOREIGN KEY(queue_id)
+	  REFERENCES queues(queue_id),
+    CONSTRAINT joinOnce UNIQUE(customer_id, queue_id),
+    joinTime TIMESTAMP DEFAULT NOW(),
+    serveravailable Boolean DEFAULT false NOT NULL
+);

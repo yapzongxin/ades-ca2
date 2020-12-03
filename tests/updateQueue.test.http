@@ -1,0 +1,42 @@
+@host = localhost:3000
+@path = /company/queue
+
+### Deactivate
+
+PUT http://{{host}}{{path}}?queue_id=QUEUE12345 HTTP/1.1
+Content-Type: application/json
+
+{
+    "status": "DEACTIVATE",
+    "queue_id": "QUEUE12345"
+}
+
+### Activate
+
+PUT http://{{host}}{{path}}?queue_id=QUEUE12345 HTTP/1.1
+Content-Type: application/json
+
+{
+    "status": "ACTIVATE",
+    "queue_id": "QUEUE12345"
+}
+
+### Unknown Queue Number
+
+PUT http://{{host}}{{path}}?queue_id=QUEUE12346 HTTP/1.1
+Content-Type: application/json
+
+{
+    "status": "ACTIVATE",
+    "queue_id": "QUEUE12321"
+}
+
+### Invalide status
+
+PUT http://{{host}}{{path}}?queue_id=QUEUE12345 HTTP/1.1
+Content-Type: application/json
+
+{
+    "status": "ACTI VATE",
+    "queue_id": "QUEUE12345"
+}

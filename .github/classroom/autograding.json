@@ -1,0 +1,64 @@
+{
+    "tests": [
+        {
+            "name": "Company: Create Queue",
+            "setup": "",
+            "run": "npm test -- createQueue --silent",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        },
+        {
+            "name": "Company: Update Queue",
+            "setup": "",
+            "run": "npm test -- updateQueue --silent",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        },
+        {
+            "name": "Customer: Join Queue",
+            "setup": "",
+            "run": "npm test -- joinQueue --silent",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        },
+        {
+            "name": "Company: Server Available",
+            "setup": "",
+            "run": "npm test -- serverAvailable --silent",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        },
+        {
+            "name": "Customer: Check Queue",
+            "setup": "",
+            "run": "npm test -- checkQueue --silent",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        },
+        {
+            "name": "Company: Arrival Rate",
+            "setup": "",
+            "run": "npm test -- arrivalRate",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 1
+        }
+    ]
+}

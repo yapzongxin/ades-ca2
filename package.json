@@ -16,17 +16,17 @@
         "jsonschema": "^1.4.0",
         "nodemon": "^2.0.6",
         "pg": "^8.5.1",
-        "morgan": "^1.10.0"
-
-    },
-    "devDependencies": {
         "async": "^3.2.0",
         "chalk": "^4.1.0",
         "jest": "^26.4.2",
         "jest-circus": "^26.5.2",
         "jest-html-reporters": "^2.1.0",
         "loadtest": "^5.1.0",
+        "morgan": "^1.10.0",
         "supertest": "^4.0.2"
+    },
+    "devDependencies": {
+        
     },
     "jest": {
         "testRunner": "jest-circus/runner",

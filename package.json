@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "engines": {
-      "node": "12.11.1"
+      "node": "14.14.0"
   },
   "scripts": {
       "test": "jest -i",
-      "start": "node ./server"
+      "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
